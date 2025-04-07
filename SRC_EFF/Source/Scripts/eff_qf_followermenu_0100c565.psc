@@ -1,0 +1,14 @@
+scriptname eff_qf_followermenu_0100c565 extends quest hidden
+referencealias property alias_plugin002 auto
+referencealias property alias_configuration auto
+referencealias property alias_plugin000 auto
+referencealias property alias_plugin006 auto
+referencealias property alias_plugin003 auto
+referencealias property alias_plugin005 auto
+referencealias property alias_plugin001 auto
+referencealias property alias_follower auto
+referencealias property alias_player auto
+referencealias property alias_plugin004 auto
+function fragment_0()
+endfunction
+;This file was cleaned with PapyrusSourceHeadliner 1

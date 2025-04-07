@@ -1,0 +1,4 @@
+scriptname pd__qf_pd_releasequest_0702e11e extends quest hidden
+referencealias property alias_a1 auto
+referencealias property alias_playeralias auto
+;This file was cleaned with PapyrusSourceHeadliner 1
