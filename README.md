@@ -15,4 +15,4 @@
 - SexLab
 - UI Extensions
 
-All `*.psc` are stored in `Source/Scripts` subfolders. They have been treated with `PapyrusSourceHeadliner` to aboid dependency spirals.
+All `*.psc` are stored in `Source/Scripts` subfolders. They have been treated with `PapyrusSourceHeadliner` to avoid dependency spirals.
