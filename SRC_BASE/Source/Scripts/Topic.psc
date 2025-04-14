@@ -1,1 +1,4 @@
-;This file was cleaned with PapyrusSourceHeadliner 1
+Scriptname Topic extends Form Hidden
+
+; Adds this topic to the list the player knows about
+Function Add() native
