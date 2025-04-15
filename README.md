@@ -9,6 +9,7 @@
 - PowerOfThree's Papyrus Extender
 - SkyUI
 - SexLab Aroused
+- Submissive Lola: the Resubmission
 - Spank that Ass
 - SexLab
 - UI Extensions
