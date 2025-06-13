@@ -1,0 +1,5 @@
+scriptname bm_d_bounty_curfewtransit extends topicinfo hidden
+function fragment_0(objectreference akspeakerref)
+endfunction
+referencealias property closestinnmarker auto
+;This file was cleaned with PapyrusSourceHeadliner 1
