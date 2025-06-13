@@ -106,12 +106,4 @@ endevent
 event onstorytrespass(objectreference akvictim, objectreference aktrespasser, \
 location aklocation, int aicrime)
 endevent
-quest function getquest(string editorid) global native
-string function getid() native
-int function getpriority() native
-int function getnumaliases() native
-alias function getnthalias(int index) native
-alias function getaliasbyname(string name) native
-alias function getaliasbyid(int aliasid) native
-alias[] function getaliases() native
 ;This file was cleaned with PapyrusSourceHeadliner 1

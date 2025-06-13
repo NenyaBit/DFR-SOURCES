@@ -23,20 +23,4 @@ int function getbudgetcount() native global
 int function getcurrentbudget(int aibudgetnumber) native global
 bool function overbudget(int aibudgetnumber) native global
 string function getbudgetname(int aibudgetnumber) native global
-float function getinifloat(string ini) global native
-int function getiniint(string ini) global native
-bool function getinibool(string ini) global native
-string function getinistring(string ini) global native
-float[] function createfloatarray(int size, float fill = 0.0) global native
-int[] function createintarray(int size, int fill = 0) global native
-bool[] function createboolarray(int size, bool fill = false) global native
-string[] function createstringarray(int size, string fill = "") global native
-form[] function createformarray(int size, form fill = none) global native
-alias[] function createaliasarray(int size, alias fill = none) global native
-float[] function resizefloatarray(float[] source, int size, float fill = 0.0) global native
-int[] function resizeintarray(int[] source, int size, int fill = 0) global native
-bool[] function resizeboolarray(bool[] source, int size, bool fill = false) global native
-string[] function resizestringarray(string[] source, int size, string fill = "") global native
-form[] function resizeformarray(form[] source, int size, form fill = none) global native
-alias[] function resizealiasarray(alias[] source, int size, alias fill = none) global native
 ;This file was cleaned with PapyrusSourceHeadliner 1

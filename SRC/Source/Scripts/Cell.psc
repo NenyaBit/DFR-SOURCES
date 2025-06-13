@@ -11,7 +11,4 @@ int aifarred, int aifargreen, int aifarblue) native
 function setfogplanes(float afnear, float affar) native
 function setfogpower(float afpower) native
 function setpublic(bool abpublic = true) native
-int function getnumrefs(int formtypefilter = 0) native
-objectreference function getnthref(int n, int formtypefilter = 0) native
-float function getwaterlevel() native
 ;This file was cleaned with PapyrusSourceHeadliner 1

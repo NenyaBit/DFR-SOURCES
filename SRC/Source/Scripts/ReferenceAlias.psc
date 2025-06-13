@@ -119,6 +119,8 @@ event onenterbleedout()
 endevent
 event onlocationchange(location akoldloc, location aknewloc)
 endevent
+event onlycanthropystatechanged(bool abiswerewolf)
+endevent
 event onobjectequipped(form akbaseobject, objectreference akreference)
 endevent
 event onobjectunequipped(form akbaseobject, objectreference akreference)
@@ -135,6 +137,12 @@ event onwardhit(objectreference akcaster, spell akspell, int aistatus)
 endevent
 event onplayerbowshot(weapon akweapon, ammo akammo, float afpower, bool absungazing)
 endevent
+event onplayerfasttravelend(float aftravelgametimehours)
+endevent
 event onplayerloadgame()
+endevent
+event onvampirefeed(actor aktarget)
+endevent
+event onvampirismstatechanged(bool abisvampire)
 endevent
 ;This file was cleaned with PapyrusSourceHeadliner 1

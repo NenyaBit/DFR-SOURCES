@@ -30,6 +30,7 @@ bool function adddependentanimatedobjectreference( objectreference akdependent )
 function addinventoryeventfilter(form akfilter) native
 function additem(form akitemtoadd, int aicount = 1, bool absilent = false) native
 function addtomap(bool aballowfasttravel = false) native
+function setcontainerallowstolenitems(bool setallowstolenitems) native
 function applyhavokimpulse(float afx, float afy, float afz, float afmagnitude) native
 function blockactivation(bool abblocked = true) native
 int function calculateencounterlevel(int aidifficulty = 4) native
@@ -47,6 +48,7 @@ function enablenowait(bool abfadein = false) native
 function forceaddragdolltoworld() native
 function forceremoveragdollfromworld() native
 actorbase function getactorowner() native
+int function getallitemscount() native
 float function getanglex() native
 float function getangley() native
 float function getanglez() native
@@ -96,6 +98,7 @@ function interruptcast() native
 bool function isactivatechild(objectreference akchild) native
 bool function isactivationblocked() native
 bool function is3dloaded() native
+bool function iscontainerempty() native
 bool function isdeleted() native
 bool function isdisabled() native
 bool function isenabled()
@@ -126,6 +129,7 @@ function processtraphit(objectreference aktrap, float afdamage, float afpushback
 function pushactoraway(actor akactortopush, float aiknockbackforce) native
 function removeallinventoryeventfilters() native
 function removeallitems(objectreference aktransferto = none, bool abkeepownership = false, bool abremovequestitems = false) native
+function removeallstolenitems(objectreference aktransferto = none) native
 function removeinventoryeventfilter(form akfilter) native
 function removeitem(form akitemtoremove, int aicount = 1, bool absilent = false, objectreference akothercontainer = none) native
 bool function removedependentanimatedobjectreference( objectreference akdependent ) native
@@ -237,29 +241,4 @@ int property motion_keyframed = 4 autoreadonly
 int property motion_fixed = 5 autoreadonly
 int property motion_thinboxintertia = 6 autoreadonly
 int property motion_character = 7 autoreadonly
-int function getnumitems() native
-form function getnthform(int index) native
-float function gettotalitemweight() native
-float function gettotalarmorweight() native
-bool function isharvested() native
-function setharvested(bool harvested) native
-function setitemhealthpercent(float health) native
-function setitemmaxcharge(float maxcharge) native
-float function getitemmaxcharge() native
-float function getitemcharge() native
-function setitemcharge(float charge) native
-function resetinventory() native
-bool function isofflimits() native
-string function getdisplayname() native
-bool function setdisplayname(string name, bool force = false) native
-objectreference function getenableparent() native
-enchantment function getenchantment() native
-function setenchantment(enchantment source, float maxcharge) native
-function createenchantment(float maxcharge, magiceffect[] effects, float[] magnitudes, int[] areas, int[] durations) native
-int function getnumreferencealiases() native
-referencealias function getnthreferencealias(int n) native
-potion function getpoison() native
-function getallforms(formlist tofill) native
-form[] function getcontainerforms() native
-referencealias[] function getreferencealiases() native
 ;This file was cleaned with PapyrusSourceHeadliner 1

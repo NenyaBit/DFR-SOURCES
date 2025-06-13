@@ -38,8 +38,11 @@ endfunction
 actorbase function getactorbase()
 endfunction
 float function getactorvalue(string asvaluename) native
+float function getactorvaluemax(string asvaluename) native
 float function getactorvaluepercentage(string asvaluename) native
 float function getav(string asvaluename)
+endfunction
+float function getavmax(string asvaluename)
 endfunction
 float function getavpercentage(string asvaluename)
 endfunction
@@ -52,6 +55,7 @@ int function getcombatstate() native
 actor function getcombattarget() native
 package function getcurrentpackage() native
 actor function getdialoguetarget() native
+armor function getequippedarmorinslot(int aislot) native
 int function getequippeditemtype(int aihand) native
 shout function getequippedshout() native
 weapon function getequippedweapon(bool ablefthand = false) native
@@ -75,6 +79,7 @@ int function getrelationshiprank(actor akother) native
 int function getsitstate() native
 int function getsleepstate() native
 float function getvoicerecoverytime() native
+float function getwarmthrating() native
 bool function hasassociation(associationtype akassociation, actor akother = none) native
 bool function hasfamilyrelationship(actor akother = none) native
 bool function haslos(objectreference akother) native
@@ -107,6 +112,7 @@ bool function isinfaction(faction akfaction) native
 bool function isinkillmove() native
 bool function isintimidated() native
 bool function isonmount() native
+bool function isoverencumbered() native
 bool function isplayerslastriddenhorse() native
 bool function isplayerteammate() native
 bool function isrunning() native
@@ -141,7 +147,9 @@ function resurrect() native
 function restoreav(string asvaluename, float afamount)
 endfunction
 function sendassaultalarm() native
+function sendlycanthropystatechanged(bool abiswerewolf) native
 function sendtrespassalarm(actor akcriminal) native
+function sendvampirismstatechanged(bool abisvampire) native
 function setactorvalue(string asvaluename, float afvalue) native
 function setalert(bool abalerted = true) native
 function setallowflying(bool aballowed = true) native
@@ -211,6 +219,8 @@ event onenterbleedout()
 endevent
 event onlocationchange(location akoldloc, location aknewloc)
 endevent
+event onlycanthropystatechanged(bool abiswerewolf)
+endevent
 event onobjectequipped(form akbaseobject, objectreference akreference)
 endevent
 event onobjectunequipped(form akbaseobject, objectreference akreference)
@@ -227,6 +237,12 @@ event onplayerbowshot(weapon akweapon, ammo akammo, float afpower, bool absungaz
 endevent
 event onplayerloadgame()
 endevent
+event onplayerfasttravelend(float aftravelgametimehours)
+endevent
+event onvampirefeed(actor aktarget)
+endevent
+event onvampirismstatechanged(bool abisvampire)
+endevent
 int property critstage_none = 0 autoreadonly
 int property critstage_goostart = 1 autoreadonly
 int property critstage_gooend = 2 autoreadonly
@@ -242,30 +258,4 @@ function forcetargetdirection(float afxangle = 0.0, float afyangle = 0.0, float 
 function forcetargetspeed(float afspeed) native
 function forcetargetangle(float afxangle = 0.0, float afyangle = 0.0, float afzangle = 0.0) native
 function clearforcedmovement() native
-form function getwornform(int slotmask) native
-int function getwornitemid(int slotmask) native
-form function getequippedobject(int location) native
-int function getequippeditemid(int location) native
-int function getspellcount() native
-spell function getnthspell(int n) native
-function queueninodeupdate() native
-function regeneratehead() native
-int property equipslot_default = 0 autoreadonly
-int property equipslot_righthand = 1 autoreadonly
-int property equipslot_lefthand = 2 autoreadonly
-function equipitemex(form item, int equipslot = 0, bool preventunequip = false, bool equipsound = true) native
-function equipitembyid(form item, int itemid, int equipslot = 0, bool preventunequip = false, bool equipsound = true) native
-function unequipitemex(form item, int equipslot = 0, bool preventequip = false) native
-function changeheadpart(headpart hpart) native
-function replaceheadpart(headpart opart, headpart newpart) native
-function updateweight(float neckdelta) native
-bool function isaienabled() native
-function resetai() native
-bool function isswimming() native
-function sheatheweapon() native
-objectreference function getfurniturereference() native
-function setexpressionphoneme(int index, float value) native
-function setexpressionmodifier(int index, float value) native
-function resetexpressionoverrides() native
-faction[] function getfactions(int minrank, int maxrank) native
 ;This file was cleaned with PapyrusSourceHeadliner 1

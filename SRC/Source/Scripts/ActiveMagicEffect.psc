@@ -128,6 +128,8 @@ event ondying(actor akkiller)
 endevent
 event onlocationchange(location akoldloc, location aknewloc)
 endevent
+event onlycanthropystatechanged(bool abiswerewolf)
+endevent
 event onobjectequipped(form akbaseobject, objectreference akreference)
 endevent
 event onobjectunequipped(form akbaseobject, objectreference akreference)
@@ -142,50 +144,12 @@ event onwardhit(objectreference akcaster, spell akspell, int aistatus)
 endevent
 event onplayerbowshot(weapon akweapon, ammo akammo, float afpower, bool absungazing)
 endevent
+event onplayerfasttravelend(float aftravelgametimehours)
+endevent
 event onplayerloadgame()
 endevent
-float function getduration() native
-float function gettimeelapsed() native
-function registerforkey(int keycode) native
-function unregisterforkey(int keycode) native
-function unregisterforallkeys() native
-event onkeydown(int keycode)
+event onvampirefeed(actor aktarget)
 endevent
-event onkeyup(int keycode, float holdtime)
+event onvampirismstatechanged(bool abisvampire)
 endevent
-function registerforcontrol(string control) native
-function unregisterforcontrol(string control) native
-function unregisterforallcontrols() native
-event oncontroldown(string control)
-endevent
-event oncontrolup(string control, float holdtime)
-endevent
-function registerformenu(string menuname) native
-function unregisterformenu(string menuname) native
-function unregisterforallmenus() native
-event onmenuopen(string menuname)
-endevent
-event onmenuclose(string menuname)
-endevent
-function registerformodevent(string eventname, string callbackname) native
-function unregisterformodevent(string eventname) native
-function unregisterforallmodevents() native
-function sendmodevent(string eventname, string strarg = "", float numarg = 0.0) native
-function registerforcamerastate() native
-function unregisterforcamerastate() native
-event onplayercamerastate(int oldstate, int newstate)
-endevent
-function registerforcrosshairref() native
-function unregisterforcrosshairref() native
-event oncrosshairrefchange(objectreference ref)
-endevent
-function registerforactoraction(int actiontype) native
-function unregisterforactoraction(int actiontype) native
-event onactoraction(int actiontype, actor akactor, form source, int slot)
-endevent
-function registerforninodeupdate() native
-function unregisterforninodeupdate() native
-event onninodeupdate(objectreference akactor)
-endevent
-float function getmagnitude() native
 ;This file was cleaned with PapyrusSourceHeadliner 1
